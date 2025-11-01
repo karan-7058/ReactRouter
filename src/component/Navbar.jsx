@@ -29,6 +29,23 @@ export default function Navbar() {
         >
           Contact
         </NavLink>
+       
+       <NavLink
+         to="/users/1"
+         className={({ isActive}) =>
+          `hover:text-yellow-400 ${isActive ? "text-yellow-400" :""}`
+        }>
+          User1
+       </NavLink>
+
+       <NavLink
+         to="/users/2"
+         className={({ isActive}) =>
+          `hover:text-yellow-400 ${isActive ? "text-yellow-400" :""}`
+        }>
+          User2
+       </NavLink>
+
       </div>
     </nav>
   );
