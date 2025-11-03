@@ -1,6 +1,9 @@
-import {Link , NavLink} from "react-router-dom";
+import {Link , NavLink , useNavigate , useLocation} from "react-router-dom";
 
 export default function Navbar() {
+  const navigate=useNavigate();
+  const location=useLocation();
+
   return (
     <nav className="bg-gray-900 text-white flex justify-between items-center px-6 py-3 shadow-lg">
       <h1 className="text-2xl font-semibold">Wanderer Stay</h1>
@@ -21,14 +24,9 @@ export default function Navbar() {
         >
           About
         </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            `hover:text-yellow-400 ${isActive ? "text-yellow-400" : ""}`
-          }
-        >
-          Contact
-        </NavLink>
+        <button className={location.pathname === "/contact" ? "text-yellow-400" : ""} onClick={()=>navigate("/contact")}>
+            contact us
+        </button>
        
        <NavLink
          to="/users/1"
