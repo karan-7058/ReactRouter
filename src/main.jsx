@@ -6,6 +6,7 @@ import About from "./pages/About.jsx"
 import Home from "./pages/Home.jsx"
 import User from "./pages/User.jsx"
 import Contact from "./pages/Contact.jsx"
+import ErrorPage from "./pages/ErrorPage.jsx"
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 
 
@@ -17,7 +18,8 @@ const router =createBrowserRouter([
        {path:"/" , element:<Home/>},
        {path:"/about" , element:<About/>},
        {path:"/users/:id" , element:<User/>},
-       {path:"/contact" , element:<Contact/>} 
+       {path:"/contact" , element:<Contact/>},
+       {path:"*" , element:<ErrorPage/>} 
      
     ]
   },
