@@ -1,12 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import {lazy , Suspense} from "react"
 import './index.css'
 import App from './App.jsx'
-import About from "./pages/About.jsx"
-import Home from "./pages/Home.jsx"
-import User from "./pages/User.jsx"
-import Contact from "./pages/Contact.jsx"
-import ErrorPage from "./pages/ErrorPage.jsx"
+const Home=lazy(()=> import("./pages/Home.jsx"))
+const About=lazy(()=>import("./pages/About.jsx"))
+const User=lazy(()=>import("./pages/User.jsx"))
+const Contact=lazy(()=>import("./pages/Contact.jsx"))
+const ErrorPage=lazy(()=>import("./pages/ErrorPage.jsx"))
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 
 
@@ -27,7 +28,11 @@ const router =createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-   <RouterProvider router={router} />
-  </StrictMode>,
+ 
+
+    <Suspense fallback={<p>Loading...</p>}>
+      <RouterProvider router={router} />
+    </Suspense>
+
+  
 )
