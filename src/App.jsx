@@ -1,22 +1,13 @@
-import { useState } from 'react'
-import Navbar from "./component/Navbar.jsx"
-
-
-import {Outlet} from "react-router-dom"
-
-
-import './App.css'
+import {Suspense} from "react"
+import { RouterProvider } from "react-router-dom";
+import mainRouter from "./routes/mainRouter.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-    <Navbar />
-    <Outlet />
-   </div>
+   <Suspense fallback={<p>Loading...</p>}>
+      <RouterProvider router={mainRouter} />
+    </Suspense>
   )
-  
 }
 
-export default App
+export default App;
