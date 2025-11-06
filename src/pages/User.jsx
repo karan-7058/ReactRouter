@@ -9,7 +9,7 @@ export default function User(){
       name: "Karan Aghav",
       role: "Frontend Developer",
       location: "Pune, India",
-      linkedin: "https://linkedin.com/in/karanaghav",
+      linkedin: "http://linkedin.com/in/karan-aghav",
       github: "https://github.com/karan-7058",
       photo: "https://randomuser.me/api/portraits/men/32.jpg",
       about:
@@ -42,6 +42,8 @@ export default function User(){
                 <p className="text-gray-600">{user.role}</p>
                 <p className="text-gray-500"> {user.location}</p>
                 <p className="text-gray-400">{user.about}</p>
+                <a href={user.linkedin} className="text-blue-500 hover:underline">LinkedIn</a>
+                
                 
 
              </div>
