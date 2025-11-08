@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gray-900 text-white flex justify-between items-center px-6 py-3 shadow-lg">
-      <h1 className="text-2xl font-semibold">Wanderer Stay</h1>
+      <h1 className="text-2xl font-semibold cursor-pointer" onClick={()=>navigate("/")}>Wanderer Stay</h1>
       <div className="space-x-6">
         <NavLink
           to="/"
