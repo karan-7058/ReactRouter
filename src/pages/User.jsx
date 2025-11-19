@@ -38,7 +38,7 @@ export default function User(){
         <div className="max-w-md mx-auto bg-white shadow-md rounded-md overflow-hidden mt-10">
              <img src={user.photo} alt={user.name} className="w-full h-48 object-cover" />
              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">{user.name}</h2>
+                <h2 className="text-xl font-semibold mb-2 text-gray-600">{user.name}</h2>
                 <p className="text-gray-600">{user.role}</p>
                 <p className="text-gray-500"> {user.location}</p>
                 <p className="text-gray-400">{user.about}</p>

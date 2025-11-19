@@ -23,7 +23,7 @@ const cards = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-wrap justify-center items-start p-6 bg-gray-50">
+    <div className="min-h-screen flex flex-wrap justify-center items-start p-6 ">
       {cards.map((c, i) => (
         <Cards key={i} {...c} />
       ))}
